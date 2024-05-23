@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var message = ""
-    @State private var messages: [Message] = [Message(isUser: false, text: "Hello, I'm ChatBot.  How can I help you?")]
+    @State private var messages: [Message] = [Message(isBot: true, text: "Hello, I'm ChatBot.  How can I help you?")]
     
     var body: some View {
         VStack {
@@ -23,27 +23,27 @@ struct ContentView: View {
             ScrollView {
                 ForEach(messages, id: \.self) { message in
                     HStack {
-                        if message.isUser {
-                            Spacer()
-                        } else {
+                        if message.isBot {
                             Image(systemName: "brain")
                                 .font(.system(size: 28))
                                 .foregroundColor(.purple)
+                        } else {
+                            Spacer()
                         }
                         
                         Text(message.text)
                             .padding(10)
-                            .background(message.isUser ? Color.blue : Color.gray.opacity(0.2))
-                            .foregroundColor(message.isUser ? .white : .black)
+                            .background(message.isBot ? Color.gray.opacity(0.2) : Color.blue)
+                            .foregroundColor(message.isBot ? .black : .white)
                             .clipShape(RoundedRectangle(cornerRadius: 5.0))
                         
-                        if message.isUser {
+                        if message.isBot {
+                            Spacer()
+                        } else {
                             Image(systemName: "person.fill")
                                 .font(.system(size: 35))
                                 .cornerRadius(1.0)
                                 .foregroundColor(.blue)
-                        } else {
-                            Spacer()
                         }
                     }
                 }
@@ -58,7 +58,7 @@ struct ContentView: View {
                     .foregroundColor(.blue)
                     .onTapGesture {
                         if message.count > 0 {
-                            let userMessage = Message(isUser: true, text: message)
+                            let userMessage = Message(isBot: false, text: message)
                             messages.append(userMessage)
                             message = ""
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

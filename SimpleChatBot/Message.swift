@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Message: Hashable {
+    var isBot: Bool
+    var text: String
+}

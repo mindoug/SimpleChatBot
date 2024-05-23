@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39BC483C2BFFE154008509B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC483B2BFFE154008509B2 /* ContentView.swift */; };
 		39F6C1562BF2BBF100BB21B0 /* SimpleChatBotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6C1552BF2BBF100BB21B0 /* SimpleChatBotApp.swift */; };
-		39F6C1582BF2BBF100BB21B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6C1572BF2BBF100BB21B0 /* ContentView.swift */; };
 		39F6C15A2BF2BBF900BB21B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F6C1592BF2BBF900BB21B0 /* Assets.xcassets */; };
 		39F6C15D2BF2BBF900BB21B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F6C15C2BF2BBF900BB21B0 /* Preview Assets.xcassets */; };
+		39F6C1642BF2BC2000BB21B0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6C1632BF2BC2000BB21B0 /* Message.swift */; };
+		39F6C1662BF2BC6600BB21B0 /* BotBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6C1652BF2BC6600BB21B0 /* BotBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39BC483B2BFFE154008509B2 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39F6C1522BF2BBF100BB21B0 /* SimpleChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F6C1552BF2BBF100BB21B0 /* SimpleChatBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatBotApp.swift; sourceTree = "<group>"; };
-		39F6C1572BF2BBF100BB21B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39F6C1592BF2BBF900BB21B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F6C15C2BF2BBF900BB21B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39F6C1632BF2BC2000BB21B0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		39F6C1652BF2BC6600BB21B0 /* BotBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		39F6C1542BF2BBF100BB21B0 /* SimpleChatBot */ = {
 			isa = PBXGroup;
 			children = (
+				39F6C1632BF2BC2000BB21B0 /* Message.swift */,
+				39F6C1652BF2BC6600BB21B0 /* BotBrain.swift */,
 				39F6C1552BF2BBF100BB21B0 /* SimpleChatBotApp.swift */,
-				39F6C1572BF2BBF100BB21B0 /* ContentView.swift */,
+				39BC483B2BFFE154008509B2 /* ContentView.swift */,
 				39F6C1592BF2BBF900BB21B0 /* Assets.xcassets */,
 				39F6C15B2BF2BBF900BB21B0 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F6C1582BF2BBF100BB21B0 /* ContentView.swift in Sources */,
+				39F6C1642BF2BC2000BB21B0 /* Message.swift in Sources */,
+				39F6C1662BF2BC6600BB21B0 /* BotBrain.swift in Sources */,
+				39BC483C2BFFE154008509B2 /* ContentView.swift in Sources */,
 				39F6C1562BF2BBF100BB21B0 /* SimpleChatBotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +287,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
